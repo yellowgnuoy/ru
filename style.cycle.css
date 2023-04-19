@@ -1,0 +1,196 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+@font-face {
+    font-family: 'YUniverse-B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_yuniverse@1.0/YUniverse-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+body {
+    background: url(img/main_bg.jpg);
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 90px 200px 120px 60px;
+}
+p{
+    color:white;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+.text_obj {
+    position: relative;
+    animation: fadeInUp 1s;
+}
+
+.resquick_content {
+    top: 260px;
+    right: 60px;
+    height: 100vh;
+    font-size: 40px;
+    font-family: 'YUniverse-B';
+    font-weight: 800;
+    list-style: none;
+    position: fixed;
+    height: 100%
+}
+
+.resquick_content li a {
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+}
+
+.resquick_content>li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: right;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.resquick_content>li a:after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    background: #ffffff;
+}
+
+.resquick_content>li a:hover {
+    color: rgb(45, 54, 153);
+}
+.graph {
+    text-align: center;
+}
+
+.gh {
+    display: inline-block;
+}
+.resquick_content>li a:hover:after {
+    width: 100%;
+    z-index: -1;
+}
+
+a {
+    color: rgb(247, 232, 114);
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: white;
+}
+
+h1 {
+        font-family: 'YUniverse-B';
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+h2 {
+    top: 100px;
+    right: 750px;
+    position: fixed;
+    font-size: 150px;
+    font-family: 'YUniverse-B';
+    color: white;
+}
+
+h3 {
+    font-family: 'Pretendard';
+    letter-spacing: 7px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+}
+h4{
+    font-family: 'Pretendard';
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    /* 부모 요소의 위치 속성을 설정합니다. */
+    display: flex;
+    justify-content: center; /* 가로 정렬 방식 설정 */
+    align-items: center; /* 세로 정렬 방식 설정 */
+}
+
+.sheep {
+    padding: 10px;
+    font-size: 5em;
+    animation: motion 1s
+        /* 속도 */
+        linear 0s
+        /* 처음부터 끝까지 일정 속도로 진행 */
+        infinite alternate;
+    /* 무한 반복 */
+}
+
+.sheep:hover {
+    font-size: 5em;
+    animation: motion 0.3s linear 0s infinite alternate, motion-hover 0.3s linear 0s infinite alternate;
+}
+
+@keyframes motion {
+    0% {
+        margin-top: 120px;
+    }
+
+    /* 처음 위치 */
+    100% {
+        margin-top: 130px;
+    }
+
+    /* 마지막 위치 */
+}
+@keyframes motion-hover {
+    0% {
+        margin-top: 120px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+#wrap {
+    min-height: 30vh;
+    position: relative;
+    width: 100%;
+}
+footer {
+    font-family: 'Pretendard';
+	width: 100%;
+	height: 80px; /* 내용물에 따라 알맞는 값 설정 */
+	bottom: 0px;
+	position: absolute;
+}
